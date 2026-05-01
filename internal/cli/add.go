@@ -7,7 +7,7 @@ import (
 	"io"
 )
 
-func RunAdd(args []string) error {
+func runAdd(args []string) error {
 	fs := flag.NewFlagSet("add", flag.ContinueOnError)
 	fs.SetOutput(io.Discard)
 
