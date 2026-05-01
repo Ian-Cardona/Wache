@@ -8,13 +8,6 @@ import (
 
 type CommandFunc func(args []string) error
 
-func runAdd(args []string) error {
-	for _, v := range args {
-		fmt.Printf("Running %s...", v)
-	}
-	return nil
-}
-
 func main() {
 	if len(os.Args) < 2 {
 		prog := filepath.Base(os.Args[0])
@@ -22,7 +15,8 @@ func main() {
 	}
 
 	commands := map[string]func([]string) error{
-		"add": runAdd,
+		"add":  runAdd,
+		"list": runList,
 	}
 
 	handler, ok := commands[os.Args[1]]
