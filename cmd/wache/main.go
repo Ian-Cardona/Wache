@@ -15,8 +15,8 @@ func main() {
 	}
 
 	commands := map[string]func([]string) error{
-		"add":  runAdd,
-		"list": runList,
+		"add":  cli.runAdd,
+		"list": cli.runList,
 	}
 
 	handler, ok := commands[os.Args[1]]
