@@ -7,7 +7,7 @@ import (
 	"io"
 )
 
-func runList(args []string) error {
+func RunList(args []string) error {
 	fs := flag.NewFlagSet("list", flag.ContinueOnError)
 	fs.SetOutput(io.Discard)
 
